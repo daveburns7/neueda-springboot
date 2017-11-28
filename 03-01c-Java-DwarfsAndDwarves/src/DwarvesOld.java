@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Dwarves {
+public class DwarvesOld {
 
 	public static void main(String[] args) {
 
