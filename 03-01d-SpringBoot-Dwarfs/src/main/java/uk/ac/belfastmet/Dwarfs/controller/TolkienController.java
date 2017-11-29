@@ -1,9 +1,26 @@
+package uk.ac.belfastmet.Dwarfs.controller;
+
 import java.util.ArrayList;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-public class Main {
+import uk.ac.belfastmet.Dwarfs.domain.Dwarf;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+@Controller
+@RequestMapping("/")
+public class TolkienController {
+
+	@GetMapping("/tolkien")
+	public String tolkien(Model model) {
+	model.addAttribute("pageTitle", "Tolkien!");
+	model.addAttribute("dwarfs", getDwarfs());
+	return "tolkienPage";
+	}
+
+	public ArrayList<Dwarf> getDwarfs(){
+		//Creating Dwarfs using a constructor
 		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 
 		Dwarf sleepy = new Dwarf("Sleepy", "Disney", "Sleepy.png");
@@ -39,7 +56,7 @@ public class Main {
 		dwarfs.add(nori);
 		Dwarf ori = new Dwarf("Ori", "Tolkien", "Ori.png");
 		dwarfs.add(ori);
-		Dwarf oin = new Dwarf("Óin", "Tolkien", "Óin.png");
+		Dwarf oin = new Dwarf("Ã“in", "Tolkien", "Ã“in.png");
 		dwarfs.add(oin);
 		Dwarf bifur = new Dwarf("Bifur", "Tolkien", "Bifur.png");
 		dwarfs.add(bifur);
@@ -48,19 +65,11 @@ public class Main {
 		Dwarf bofur = new Dwarf("Bofur", "Tolkien", "Bofur.png");
 		dwarfs.add(bofur);
 
-		System.out.println("Snow White's Dwarfs are: ");
-		System.out.println("The Company of Thorin are: ");
+		return dwarfs;
 		
-		for (Dwarf dwarf : dwarfs) {
-			if (dwarf.getAuthor().equals("Disney")) {
-				System.out.println("\t" + dwarf.getName() + ": ");
-			}
-	{
-		for (Dwarf dwarf : dwarfs) {
-			if (dwarf.getAuthor().equals("Tolkien")) {
-				System.out.println("\t" + dwarf.getName() + ": ");
-					}
-			}
 		}
+
 	}
-}
+
+
+
