@@ -1,4 +1,4 @@
-package uk.ac.belfastmet.LargestBuildings;
+package uk.ac.belfastmet.LargestBuildings.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 
 public class HomeController {
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String home(Model model) {
 		model.addAttribute("pageTitle", "home!");
 		return "Home";
