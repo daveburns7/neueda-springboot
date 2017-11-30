@@ -1,9 +1,23 @@
+package uk.ac.belfastmet.Dwarfs.service;
+
 import java.util.ArrayList;
 
-public class Main {
+import org.springframework.stereotype.Service;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+import uk.ac.belfastmet.Dwarfs.domain.Dwarf;
+
+@Service
+public class DwarfService {
+
+	private ArrayList<Dwarf> disneyDwarfs;
+	private ArrayList<Dwarf> tolkienDwarfs;
+
+	public DwarfService() {
+		super();
+	}
+
+	public ArrayList<Dwarf> getDisneyDwarfs() {
+		// Creating Dwarfs using a constructor
 		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 
 		Dwarf sleepy = new Dwarf("Sleepy", "Disney", "Sleepy.png");
@@ -21,7 +35,15 @@ public class Main {
 		Dwarf sneezy = new Dwarf("Sneezy", "Disney", "Sneezy.png");
 		dwarfs.add(sneezy);
 
-		Dwarf thorin = new Dwarf("Thorin Oakenshield", "Tolkien", "ThorinOakenshield.png");
+		return dwarfs;
+
+	}
+
+	public ArrayList<Dwarf> getTolkienDwarfs() {
+		// Creating Dwarfs using a constructor
+		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
+
+		Dwarf thorin = new Dwarf("Thorin", "Tolkien", "Thorin.png");
 		dwarfs.add(thorin);
 		Dwarf dwalin = new Dwarf("Dwalin", "Tolkien", "Dwalin.png");
 		dwarfs.add(dwalin);
@@ -39,8 +61,8 @@ public class Main {
 		dwarfs.add(nori);
 		Dwarf ori = new Dwarf("Ori", "Tolkien", "Ori.png");
 		dwarfs.add(ori);
-		Dwarf oin = new Dwarf("�in", "Tolkien", "�in.png");
-		dwarfs.add(oin);
+		Dwarf Óin = new Dwarf("Óin", "Tolkien", "Óin.png");
+		dwarfs.add(Óin);
 		Dwarf bifur = new Dwarf("Bifur", "Tolkien", "Bifur.png");
 		dwarfs.add(bifur);
 		Dwarf bombur = new Dwarf("Bombur", "Tolkien", "Bombur.png");
@@ -48,15 +70,8 @@ public class Main {
 		Dwarf bofur = new Dwarf("Bofur", "Tolkien", "Bofur.png");
 		dwarfs.add(bofur);
 
-		System.out.println("Snow White's Dwarfs are: ");
-		System.out.println("The Company of Thorin are: ");
-		
-		for (Dwarf dwarf : dwarfs) {
-			if (dwarf.getAuthor().equals("Disney")) {
-				System.out.println("\t" + dwarf.getName() + ": ");
-			}
+		return dwarfs;
 
-			}
-		}
 	}
+}
 

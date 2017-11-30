@@ -13,16 +13,16 @@ import uk.ac.belfastmet.Dwarfs.service.DwarfService;
 
 @Controller
 @RequestMapping("/")
-public class TolkienController {
+public class DisneyController {
 
 	@Autowired
 	private DwarfService dwarfService;
 
-	@GetMapping("/tolkien")
-	public String tolkien(Model model) {
-		model.addAttribute("pageTitle", "Tolkien!");
+	@GetMapping("/disney")
+	public String disney(Model model) {
+		model.addAttribute("pageTitle", "Disney!");
 		this.dwarfService = new DwarfService();
-		model.addAttribute("dwarfs", this.dwarfService.getTolkienDwarfs());
-		return "tolkienPage";
+		model.addAttribute("dwarfs", this.dwarfService.getDisneyDwarfs());
+		return "disneyPage";
 	}
 }
