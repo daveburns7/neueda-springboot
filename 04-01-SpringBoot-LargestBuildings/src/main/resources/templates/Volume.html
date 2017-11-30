@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
@@ -13,7 +13,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <!-- Custom Styles  -->
-<meta charset="ISO-8859-1">
+<meta charset="ISO-8859-1"/>
 <title>Largest Buildings by Usable Volume</title>
 </head>
 <body>
@@ -34,10 +34,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="buildings : ${buildings}">
-					<td th:text="${building.name}">New Century Global Center</td>
-					<td><img src="../static/1_Boeing_Everett_Plant.jpg"
-						th:src='@{/} + ${building.image}' width="100" height="150" /></td>
+<tr th:each="buildings : ${buildings}">
+					<td th:text="${buildings.name}">New Century Global Center</td>
+					<td th:text="${buildings.rank}">1</td>
+					<td><img src="../static/1_Aalsmeer Flower Auction.jpg"
+						th:src="@{/} + ${buildings.picture}" width="150" height="100" /></td>
 				</tr>
 			</tbody>
 		</table>

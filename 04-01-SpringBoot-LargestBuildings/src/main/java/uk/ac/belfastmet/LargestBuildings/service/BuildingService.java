@@ -2,10 +2,13 @@ package uk.ac.belfastmet.LargestBuildings.service;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import uk.ac.belfastmet.LargestBuildings.domain.FloorArea;
 import uk.ac.belfastmet.LargestBuildings.domain.Footprint;
 import uk.ac.belfastmet.LargestBuildings.domain.Volume;
 
+@Service
 public class BuildingService {
 
 	public ArrayList<FloorArea> getFloorArea() {
