@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<title th:text="${pageTitle}">Cereal Home Page</title>
+</head>
+<body>
+
+	<div class="jumbotron text-center">
+
+		<h1>We Love Cereal!!!!</h1>
+		<p>What do cats eat for breakfast? Mice Krispies!</p>
+
+	</div>
+
+	<div class="container"></div>
+
+	<table class="table table-striped">
+
+		<tr>
+			<th>Manufacturer</th>
+			<th>Name</th>
+			<th>Energy</th>
+			<th>Calories</th>
+			<th>Protein</th>
+			<th>Carbohydrate</th>
+			<th>Sugars</th>
+			<th>Fat</th>
+			<th>Saturates</th>
+			<th>Fibre</th>
+			<th>Sodium</th>
+			<th>Salt</th>
+			<th>Iron</th>
+			<th>Links</th>
+
+		</tr>
+		<tbody>
+		
+			<tr th:each="cereal : ${cereals}">
+
+				<td th:text="${cereal.manufacturer}"></td>
+				<td th:text="${cereal.name}"></td>
+				<td th:text="${cereal.energy}"></td>
+				<td th:text="${cereal.calories}"></td>
+				<td th:text="${cereal.protein}"></td>
+				<td th:text="${cereal.carbohydrate}"></td>
+				<td th:text="${cereal.sugars}"></td>
+				<td th:text="${cereal.fat}"></td>
+				<td th:text="${cereal.saturates}"></td>
+				<td th:text="${cereal.fibre}"></td>
+				<td th:text="${cereal.sodium}"></td>
+				<td th:text="${cereal.salt}"></td>
+				<td th:text="${cereal.iron}"></td>
+				<td><a href="#" th:href="@{cereal/view/} + ${cereal.cerealID}">View</a>
+					<a href="#" th:href="@{cereal/edit/} + ${cereal.cerealID}">Edit</a>
+					<a href="#" th:href="@{cereal/delete/} + ${cereal.cerealID}">Delete</a>
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

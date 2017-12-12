@@ -2,8 +2,8 @@ package uk.ac.belfastmet.TitanicDatabase.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import uk.ac.belfastmet.TitanicDatabase.domain.Passengers;
+import uk.ac.belfastmet.TitanicDatabase.domain.Passenger;
 
-public interface PassengerRepository extends CrudRepository<Passengers, Integer> {
+public interface PassengerRepository extends CrudRepository<Passenger, Integer> {
 
 }

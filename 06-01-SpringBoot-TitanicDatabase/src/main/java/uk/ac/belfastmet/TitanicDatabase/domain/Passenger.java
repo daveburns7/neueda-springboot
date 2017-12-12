@@ -5,39 +5,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Passengers {
-
-	public Passengers(Integer passengerId, Integer survived, Integer pclass, String name, String sex, Float age,
-			Integer sibSp, Integer parch, String ticket, Float fare, String cabin, String embarked) {
-		super();
-		this.passengerId = passengerId;
-		this.survived = survived;
-		Pclass = pclass;
-		Name = name;
-		Sex = sex;
-		Age = age;
-		SibSp = sibSp;
-		Parch = parch;
-		Ticket = ticket;
-		Fare = fare;
-		Cabin = cabin;
-		Embarked = embarked;
-	}
+public class Passenger {
 
 	@Id
 	@GeneratedValue
 	private Integer passengerId;
 	private Integer survived;
 	private Integer Pclass;
-	private String Name;
-	private String Sex;
-	private Float Age;
-	private Integer SibSp;
-	private Integer Parch;
-	private String Ticket;
-	private Float Fare;
-	private String Cabin;
-	private String Embarked;
+	private String name;
+	private String sex;
+	private Float age;
+	private Integer sibsp;
+	private Integer parch;
+	private String ticket;
+	private Float fare;
+	private String cabin;
+	private String embarked;
+
+	public Passenger() {
+		super();
+	}
 
 	public Integer getPassengerId() {
 		return passengerId;
@@ -64,75 +51,75 @@ public class Passengers {
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getSex() {
-		return Sex;
+		return sex;
 	}
 
 	public void setSex(String sex) {
-		Sex = sex;
+		this.sex = sex;
 	}
 
 	public Float getAge() {
-		return Age;
+		return age;
 	}
 
 	public void setAge(Float age) {
-		Age = age;
+		this.age = age;
 	}
 
-	public Integer getSibSp() {
-		return SibSp;
+	public Integer getSibsp() {
+		return sibsp;
 	}
 
-	public void setSibSp(Integer sibSp) {
-		SibSp = sibSp;
+	public void setSibsp(Integer sibsp) {
+		this.sibsp = sibsp;
 	}
 
 	public Integer getParch() {
-		return Parch;
+		return parch;
 	}
 
 	public void setParch(Integer parch) {
-		Parch = parch;
+		this.parch = parch;
 	}
 
 	public String getTicket() {
-		return Ticket;
+		return ticket;
 	}
 
 	public void setTicket(String ticket) {
-		Ticket = ticket;
+		this.ticket = ticket;
 	}
 
 	public Float getFare() {
-		return Fare;
+		return fare;
 	}
 
 	public void setFare(Float fare) {
-		Fare = fare;
+		this.fare = fare;
 	}
 
 	public String getCabin() {
-		return Cabin;
+		return cabin;
 	}
 
 	public void setCabin(String cabin) {
-		Cabin = cabin;
+		this.cabin = cabin;
 	}
 
 	public String getEmbarked() {
-		return Embarked;
+		return embarked;
 	}
 
 	public void setEmbarked(String embarked) {
-		Embarked = embarked;
+		this.embarked = embarked;
 	}
 
 }
