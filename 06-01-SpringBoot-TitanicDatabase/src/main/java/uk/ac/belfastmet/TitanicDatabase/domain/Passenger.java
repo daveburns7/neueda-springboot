@@ -11,7 +11,7 @@ public class Passenger {
 	@GeneratedValue
 	private Integer passengerId;
 	private Integer survived;
-	private Integer Pclass;
+	private Integer pclass;
 	private String name;
 	private String sex;
 	private Float age;
@@ -43,11 +43,11 @@ public class Passenger {
 	}
 
 	public Integer getPclass() {
-		return Pclass;
+		return pclass;
 	}
 
 	public void setPclass(Integer pclass) {
-		Pclass = pclass;
+		this.pclass = pclass;
 	}
 
 	public String getName() {

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import uk.ac.belfastmet.forms.domain.Cereal;
 import uk.ac.belfastmet.forms.repository.CerealRepository;
@@ -37,7 +38,7 @@ public class HomeController {
 		return "ViewCereal";
 	}
 
-	@GetMapping("/cereal/edit/{cerealId}")	
+	@GetMapping("/cereal/edit/{cerealId}")
 	public String editCereal(@PathVariable("cerealId") Integer cerealId, Model model) {
 		model.addAttribute("pageTitle", "Edit Cereal");
 		model.addAttribute("cereal", cerealRepository.findOne(cerealId));
@@ -54,13 +55,14 @@ public class HomeController {
 	@PostMapping("/cereal/save")
 	public String saveCereal(Cereal cereal) {
 		Cereal savedCereal = cerealRepository.save(cereal);
-		return "redirect:/cereal/view/" + savedCereal.getCerealID();
+		return "redirect:/cereal/view/" + savedCereal.getCerealid();
 	}
 
-	@GetMapping("/cereal/delete/{cerealId}")	
-	public String deleteCereal(@PathVariable("cerealId") Integer cerealId, Model model) {
-		model.addAttribute("pageTitle", "Delete Cereal");
+	@GetMapping("/cereal/delete/{cerealId}")
+	public String deleteCereal(@PathVariable("cerealId") Integer cerealId, RedirectAttributes redirectAttrs) {
+
 		cerealRepository.delete(cerealId);
+		redirectAttrs.addFlashAttribute("message", "Cereal was deleted");
 		return "redirect:/";
 	}
 }

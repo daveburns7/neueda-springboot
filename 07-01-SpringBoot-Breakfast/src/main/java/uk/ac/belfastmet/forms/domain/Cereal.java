@@ -14,7 +14,7 @@ public class Cereal {
 	@Id
 	@GeneratedValue
 
-	private Integer cerealID;
+	private Integer cerealid;
 	private String manufacturer;
 	private String name;
 	private Integer energy;
@@ -29,12 +29,12 @@ public class Cereal {
 	private String salt;
 	private Double iron;
 
-	public Integer getCerealID() {
-		return cerealID;
+	public Integer getCerealid() {
+		return cerealid;
 	}
 
-	public void setCerealID(Integer cerealID) {
-		this.cerealID = cerealID;
+	public void setCerealid(Integer cerealid) {
+		this.cerealid = cerealid;
 	}
 
 	public String getManufacturer() {

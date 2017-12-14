@@ -56,9 +56,9 @@
 				<td th:text="${cereal.sodium}"></td>
 				<td th:text="${cereal.salt}"></td>
 				<td th:text="${cereal.iron}"></td>
-				<td><a href="#" th:href="@{cereal/view/} + ${cereal.cerealID}">View</a>
-					<a href="#" th:href="@{cereal/edit/} + ${cereal.cerealID}">Edit</a>
-					<a href="#" th:href="@{cereal/delete/} + ${cereal.cerealID}">Delete</a>
+				<td><a class="btn btn-secondary" role="button" aria-pressed="true" href="#" th:href="@{cereal/view/} + ${cereal.cerealid}">View</a>
+					<a class="btn btn-secondary" role="button" aria-pressed="true" href="#" th:href="@{cereal/edit/} + ${cereal.cerealid}">Edit</a>
+					<a class="btn btn-secondary" role="button" aria-pressed="true" href="#" th:href="@{cereal/delete/} + ${cereal.cerealid}">Delete</a>
 				</td>
 
 			</tr>
