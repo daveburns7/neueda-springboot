@@ -26,6 +26,23 @@ public class Passenger {
 		super();
 	}
 
+	public Passenger(Integer passengerId, Integer survived, Integer pclass, String name, String sex, Float age,
+			Integer sibsp, Integer parch, String ticket, Float fare, String cabin, String embarked) {
+		super();
+		this.passengerId = passengerId;
+		this.survived = survived;
+		this.pclass = pclass;
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+		this.sibsp = sibsp;
+		this.parch = parch;
+		this.ticket = ticket;
+		this.fare = fare;
+		this.cabin = cabin;
+		this.embarked = embarked;
+	}
+
 	public Integer getPassengerId() {
 		return passengerId;
 	}
@@ -46,8 +63,8 @@ public class Passenger {
 		return pclass;
 	}
 
-	public void setPclass(Integer pclass) {
-		this.pclass = pclass;
+	public void setPclass(Integer pClass) {
+		this.pclass = pClass;
 	}
 
 	public String getName() {
