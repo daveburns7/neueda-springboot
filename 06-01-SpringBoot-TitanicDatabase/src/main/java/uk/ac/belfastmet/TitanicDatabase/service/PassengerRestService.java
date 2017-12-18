@@ -10,8 +10,10 @@ public interface PassengerRestService {
 
 	Passenger read(Integer passenger);
 
-	Passenger update(Integer passegnerId, Passenger passenger);
+	Passenger update(Integer passegnerId);
 
 	void delete(Integer passengerId);
 
+	Passenger update(Integer passengerId, Passenger passenger);
+	
 }

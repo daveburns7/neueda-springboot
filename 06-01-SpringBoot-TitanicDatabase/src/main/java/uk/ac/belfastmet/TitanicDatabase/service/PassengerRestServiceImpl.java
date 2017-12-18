@@ -46,4 +46,9 @@ public class PassengerRestServiceImpl implements PassengerRestService {
 	public void delete(Integer passengerId) {
 		this.passengersRepository.delete(passengerId);
 	}
+
+	@Override
+	public Passenger update(Integer passegnerId) {
+		return null;
+	}
 }

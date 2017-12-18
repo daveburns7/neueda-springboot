@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 
 		Dwarf sleepy = new Dwarf("Sleepy", "Disney", "Sleepy.png");
@@ -50,13 +50,12 @@ public class Main {
 
 		System.out.println("Snow White's Dwarfs are: ");
 		System.out.println("The Company of Thorin are: ");
-		
+
 		for (Dwarf dwarf : dwarfs) {
 			if (dwarf.getAuthor().equals("Disney")) {
 				System.out.println("\t" + dwarf.getName() + ": ");
 			}
 
-			}
 		}
 	}
-
+}
