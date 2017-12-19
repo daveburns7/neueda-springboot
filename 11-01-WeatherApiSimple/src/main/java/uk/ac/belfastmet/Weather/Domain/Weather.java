@@ -1,8 +1,7 @@
-package uk.ac.belfastmet.Weather.domain;
-
-import Domain.Wind;
+package uk.ac.belfastmet.Weather.Domain;
 
 public class Weather {
+
 	private String description;
 	private String precipitation;
 	private Float temperature;
@@ -11,6 +10,10 @@ public class Weather {
 	private Integer cloudcover;
 	private Wind wind;
 	private String image;
+
+	public Weather() {
+		super();
+	}
 
 	public Weather(String description, String precipitation, Float temperature, String humidity, Integer pressure,
 			Integer cloudcover, Wind wind, String image) {
@@ -87,6 +90,13 @@ public class Weather {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	@Override
+	public String toString() {
+		return "Weather [description=" + description + ", precipitation=" + precipitation + ", temperature="
+				+ temperature + ", humidity=" + humidity + ", pressure=" + pressure + ", cloudcover=" + cloudcover
+				+ ", wind=" + wind + ", image=" + image + "]";
 	}
 
 }

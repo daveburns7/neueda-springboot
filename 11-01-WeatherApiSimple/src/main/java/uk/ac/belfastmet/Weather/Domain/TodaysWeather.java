@@ -1,12 +1,13 @@
-package uk.ac.belfastmet.Weather.domain;
-
-import uk.ac.belfastmet.Weather.domain.Location;
-import uk.ac.belfastmet.Weather.domain.Weather;
+package uk.ac.belfastmet.Weather.Domain;
 
 public class TodaysWeather {
+
 	private Location location;
 	private Weather weather;
-	public String getWeather;
+
+	public TodaysWeather() {
+		super();
+	}
 
 	public TodaysWeather(Location location, Weather weather) {
 		super();
@@ -28,6 +29,11 @@ public class TodaysWeather {
 
 	public void setWeather(Weather weather) {
 		this.weather = weather;
+	}
+
+	@Override
+	public String toString() {
+		return "TodaysWeather [location=" + location + ", weather=" + weather + "]";
 	}
 
 }
